@@ -1,4 +1,3 @@
-import { SignalCanvas } from "./components/SignalCanvas";
 import { PixelLens } from "./components/PixelLens";
 
 const projects = [
@@ -64,6 +63,7 @@ const practices = [
 export default function Home() {
   return (
     <main>
+      <PixelLens />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Pablo De La Cruz, home">
           <span className="brand-mark" aria-hidden="true">
@@ -87,8 +87,6 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <SignalCanvas />
-        <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
           <p className="eyebrow">
             <span className="status-dot" />
@@ -165,32 +163,6 @@ export default function Home() {
           <strong>Reliable by design</strong>
           <span>tests, fallbacks, and clear boundaries</span>
         </div>
-      </section>
-
-      <section className="section lens-section" aria-labelledby="pixel-lens-title">
-        <div className="lens-intro">
-          <div>
-            <p className="eyebrow">Interactive study / Canvas 2D</p>
-            <h2 id="pixel-lens-title">Move through the signal.</h2>
-          </div>
-          <div className="lens-description">
-            <p>
-              Pixel Lens brings one experiment from the Canvas Native Lab into
-              the portfolio: a live field that turns pointer position into an
-              optical treatment. It is built with the standard Canvas 2D API,
-              enhanced for touch and keyboard input, and remains still when
-              reduced motion is preferred.
-            </p>
-            <a
-              href="https://pablodcruz.github.io/html-in-canvas-lab/#experiments"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open the original experiment <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-        <PixelLens />
       </section>
 
       <section className="section work-section" id="work">
