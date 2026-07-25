@@ -38,6 +38,9 @@ test("renders the finished public portfolio", async () => {
     /<title>Pablo De La Cruz \| AI systems, data &amp; developer education<\/title>/i,
   );
   assert.match(html, /Technical Trainer at Revature/);
+  assert.match(html, /Pixel Lens/);
+  assert.match(html, /Move through the signal/);
+  assert.match(html, /Open the original experiment/);
   assert.match(html, /Canvas Native Lab/);
   assert.match(html, /Data Analytics Learning Lab/);
   assert.match(html, /Data Engineering Workbench/);
