@@ -52,11 +52,11 @@ test("renders the finished public portfolio", async () => {
   );
 });
 
-test("uses an absolute social card URL from the request host", async () => {
+test("uses the absolute production social card URL", async () => {
   const response = await render();
   const html = await response.text();
   assert.match(
     html,
-    /<meta[^>]+property="og:image"[^>]+content="https:\/\/portfolio\.example\/og\.png"/i,
+    /<meta[^>]+property="og:image"[^>]+content="https:\/\/pablodcruz\.github\.io\/portfolio\/og\.png"/i,
   );
 });
