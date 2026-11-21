@@ -47,7 +47,7 @@ const projects = [
       "A public record of the decisions, verification evidence, and last observed shipping status behind selected changes.",
     signal: "Dated evidence, not live telemetry",
     tags: ["Engineering workflow", "Verification", "Release review"],
-    live: "https://pabstack-work.pablo-de-la-cruz-pro.chatgpt.site",
+    live: "https://example.invalid/pabstack-gate-rehearsal",
     liveLabel: "View work log",
   },
 ];
