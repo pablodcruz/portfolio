@@ -37,8 +37,10 @@ test("renders the finished public portfolio", async () => {
     html,
     /<title>Pablo De La Cruz \| AI systems, data &amp; developer education<\/title>/i,
   );
-  assert.match(html, /Technical Trainer at Revature/);
-  assert.match(html, /data-effect="pixel-lens"/);
+  assert.doesNotMatch(html, /Technical Trainer at Revature/);
+  assert.match(html, /Independent project index/);
+  assert.match(html, /Better ePub/);
+  assert.doesNotMatch(html, /Labnotes|\$99|href="[^"]*labnotes/i);
   assert.doesNotMatch(html, /Move through the signal|Open the original experiment/);
   assert.match(html, /Canvas Native Lab/);
   assert.match(html, /Data Analytics Learning Lab/);
@@ -49,6 +51,11 @@ test("renders the finished public portfolio", async () => {
     html,
     /href="https:\/\/pabstack-work\.pablo-de-la-cruz-pro\.chatgpt\.site"[^>]*>View work log/,
   );
+  assert.equal(
+    [...html.matchAll(/href="https:\/\/pabstack-work\.pablo-de-la-cruz-pro\.chatgpt\.site"/g)].length,
+    1,
+  );
+  assert.doesNotMatch(html, /href="https:\/\/github\.com\/pablodcruz\/pabStack(?:[/"#?])/);
   assert.match(html, /Independent projects/);
   assert.match(html, /linkedin\.com\/in\/pdelac01/);
   assert.match(html, /github\.com\/pablodcruz/);

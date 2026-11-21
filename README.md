@@ -6,10 +6,18 @@ developer tooling, and technical education.
 ## Public boundary
 
 - Represents independent work and publicly documented experience.
-- May describe Pablo's current Technical Trainer role at Revature.
+- Keep public positioning employer-neutral.
 - Must not include an upcoming employer, confidential role, onboarding details,
   employer-owned work, client information, private repositories, or credentials.
 - Public projects must be linked only through their public URLs.
+
+## Content model
+
+Edit `app/content/projects.ts` to add or reorder entries. Give each a status,
+a concrete engineering question, and public source with revision-pinned
+evidence. An entry without public source links directly to its public artifact
+instead. Only add a demo after its page resolves to the expected project; a published
+page is not a stability certification. Never put internal links in this list.
 
 ## Local development
 
