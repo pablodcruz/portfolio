@@ -40,6 +40,16 @@ const projects = [
     live: "https://clanker-site.vercel.app",
     source: "https://github.com/PabloDeLaCruz1/clanker-site",
   },
+  {
+    number: "05",
+    title: "pabStack Work Log",
+    summary:
+      "A public record of the decisions, verification evidence, and last observed shipping status behind selected changes.",
+    signal: "Dated evidence, not live telemetry",
+    tags: ["Engineering workflow", "Verification", "Release review"],
+    live: "https://pabstack-work.pablo-de-la-cruz-pro.chatgpt.site",
+    liveLabel: "View work log",
+  },
 ];
 
 const practices = [
@@ -196,12 +206,14 @@ export default function Home() {
               <div className="project-links">
                 {project.live && (
                   <a href={project.live} target="_blank" rel="noreferrer">
-                    Live project <span aria-hidden="true">↗</span>
+                    {project.liveLabel ?? "Live project"} <span aria-hidden="true">↗</span>
                   </a>
                 )}
-                <a href={project.source} target="_blank" rel="noreferrer">
-                  Source <span aria-hidden="true">↗</span>
-                </a>
+                {project.source && (
+                  <a href={project.source} target="_blank" rel="noreferrer">
+                    Source <span aria-hidden="true">↗</span>
+                  </a>
+                )}
               </div>
             </article>
           ))}
