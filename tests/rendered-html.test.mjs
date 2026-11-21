@@ -44,6 +44,11 @@ test("renders the finished public portfolio", async () => {
   assert.match(html, /Data Analytics Learning Lab/);
   assert.match(html, /Data Engineering Workbench/);
   assert.match(html, /Clanker Build Journal/);
+  assert.match(html, /pabStack Work Log/);
+  assert.match(
+    html,
+    /href="https:\/\/pabstack-work\.pablo-de-la-cruz-pro\.chatgpt\.site"[^>]*>View work log/,
+  );
   assert.match(html, /Independent projects/);
   assert.match(html, /linkedin\.com\/in\/pdelac01/);
   assert.match(html, /github\.com\/pablodcruz/);
